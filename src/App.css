@@ -1,42 +1,71 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+* {
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app {
+  min-height: 100vh;
+  padding: 30px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.light {
+  background-color: #f5f5f5;
+  color: #222;
 }
 
-.card {
-  padding: 2em;
+.dark {
+  background-color: #1e1e1e;
+  color: white;
 }
 
-.read-the-docs {
-  color: #888;
+button, select {
+  padding: 10px 15px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button {
+  background-color: #198754;
+  color: white;
+}
+
+button:hover {
+  background-color: #146c43;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.product-list h2 {
+  width: 100%;
+}
+
+.product-card, .cart {
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.light .product-card,
+.light .cart {
+  background-color: white;
+  border: 1px solid #ddd;
+}
+
+.dark .product-card,
+.dark .cart {
+  background-color: #333;
+  border: 1px solid #555;
 }
